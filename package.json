@@ -1,6 +1,6 @@
 {
   "name": "spfa-theme-default",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "default theme for spfa",
   "main": "index.js",
   "scripts": {
@@ -12,5 +12,13 @@
     "highlight.js": "^9.16.2",
     "marked": "^0.7.0",
     "yamljs": "^0.3.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oi-14/spfa-theme-default.git"
+  },
+  "keywords": [
+    "blog",
+    "spfa"
+  ]
 }
