@@ -14,7 +14,11 @@ module.exports.gen = function DFGenerate(path) {
         console.log("Using default code-theme (vs2015)");
         codeTheme = "vs2015";
     }
-
+    try {
+        files.cpdir(__dirname + "/lib", path + "/public/lib");
+    } catch (error) {
+        console.error(error.toString());
+    }
     files.mkdir(path + "/public");
     files.mkdir(path + "/public/post");
     files.mkdir(path + "/public/lib");
@@ -33,9 +37,5 @@ module.exports.gen = function DFGenerate(path) {
     mkindex.mkindex(
         path + "/public/index.html", path + "/public/post");
     console.log("generating /public/index.html");
-    try {
-        files.cpdir(__dirname + "/lib", path + "/public/lib");
-    } catch (error) {
-        console.error(error.toString());
-    }
+    
 };
