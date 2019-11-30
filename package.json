@@ -1,6 +1,6 @@
 {
   "name": "spfa-theme-default",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "default theme for spfa",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,7 @@
   "author": "",
   "license": "GPL-3.0-or-later",
   "dependencies": {
+    "front-matter": "^3.0.2",
     "highlight.js": "^9.16.2",
     "marked": "^0.7.0",
     "yamljs": "^0.3.0"

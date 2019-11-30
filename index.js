@@ -4,10 +4,6 @@ var mkindex = require("./mkindex");
 var yaml = require("./yaml");
 
 module.exports.gen = function DFGenerate(path) {
-    if (!files.exist(path + "/SPFA.tag")) {
-        console.log("Please init first.");
-        return;
-    }
     var config = yaml.read(__dirname + "/config.yaml");
     var codeTheme;
     try {
@@ -18,7 +14,6 @@ module.exports.gen = function DFGenerate(path) {
         console.log("Using default code-theme (vs2015)");
         codeTheme = "vs2015";
     }
-
 
     files.mkdir(path + "/public");
     files.mkdir(path + "/public/post");
