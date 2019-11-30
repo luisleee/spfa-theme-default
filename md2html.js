@@ -28,11 +28,11 @@ function cssSection(href) {
 }
 
 function convert(string, title, style) {
-    var info = frontMatter(string);
+	var info = frontMatter(string);
+	console.log(info);
     var ititle = info.attributes.title;
     title = ititle ? ititle : title;
-    var fl = info.frontmatter.length();
-    string = string.substr(fl, string.length() - fl);
+    string = info.body;
     var cssSegs = cssSection("../lib/spfa.css") + "\n";
     cssSegs += "../lib/" + style + ".css\n";
     var htmlBody = marked(string);
