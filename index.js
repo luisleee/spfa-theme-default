@@ -37,7 +37,7 @@ module.exports.gen = function DFGenerate(path) {
     for (let i = 0; i < list.length; i++) {
         var item = list[i];
         var name = item.replace(".md", "");
-        if(dirLis.find(name)){
+        if(dirLis.findIndex(name)!=-1){
             files.cpdir(postdir+"/"+name,path+"/public/post/"+name);
         }
         md2html.md2html(
