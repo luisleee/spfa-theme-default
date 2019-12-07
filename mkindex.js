@@ -31,12 +31,12 @@ function scriptSection(src) {
 function gen(list) {
     var search = "<input id='search-name' type='text'>\n";
     search += "<button id='search-btn'>go!</button>\n";
-    var links;
+    var link;
     for (var i = 0; i < list.length; i++) {
         var file = list[i];
         var name = file.replace(".html", "");
         var lnk = linkSection("post/" + name + "/" + name + ".html");
-        links += lnk;
+        link += lnk;
     }
     var script = scriptSection("lib/jquery-3.4.1.js");
     script += scriptSection("lib/search.js");
