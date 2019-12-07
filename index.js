@@ -38,6 +38,7 @@ module.exports.gen = function DFGenerate(path) {
         var item = list[i];
         var name = item.replace(".md", "");
         if(dirLis.includes(name)){
+            files.mkdir(path+"/public/post/"+name);
             files.cpdir(postdir+"/"+name,path+"/public/post/"+name);
         }
         md2html.md2html(
