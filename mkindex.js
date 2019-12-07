@@ -85,7 +85,7 @@ function index(flist) {
 module.exports.mkindex = function(location, src) {
     var f = files.ls(src, ".html");
     //var page = index(f);
-    var page=make(f);
+    var page = gen(f);
     try {
         files.write(location, page);
     } catch (err) {
