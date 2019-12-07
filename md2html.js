@@ -8,15 +8,16 @@ marked.setOptions({
     }
 });
 
-const htmlSkeleton = `<!DOCTYPE html>
+var htmlSkeleton = `<!DOCTYPE html>
 <html>
 <head>
 <title><spfa_title></title>
 <meta charset="utf-8">
+<spfa_css>
 </head>
 <body>
 <h1><spfa_title></h1>
-<spfa_css>
+
 <spfa_body>
 </body>
 </html>`;
@@ -32,8 +33,8 @@ function convert(string, style) {
     var title = info.attributes.title;
     title = title ? title : "Untitled";
     string = info.body;
-    var cssSegs = cssSection("../lib/spfa.css") + "\n";
-    cssSegs += cssSection("../lib/" + style + ".css") + "\n";
+    var cssSegs = cssSection("../../lib/spfa.css") + "\n";
+    cssSegs += cssSection("../../lib/" + style + ".css") + "\n";
     var htmlBody = marked(string);
 
     var page = htmlSkeleton

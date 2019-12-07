@@ -26,10 +26,10 @@ module.exports.gen = function DFGenerate(path) {
     var postdir = path + "/post";
     var list = files.ls(postdir, ".md");
     var dirLis_ = files.ls(postdir, "");
-    var dirLis=[];
+    var dirLis = [];
     for (let i = 0; i < dirLis_.length; i++) {
-        var dirPath=postdir+"/"+dirLis_[i];
-        if(files.isDirectory(dirPath)){
+        var dirPath = postdir + "/" + dirLis_[i];
+        if (files.isDirectory(dirPath)) {
             dirLis.push(dirLis_[i]);
         }
     }
@@ -37,13 +37,13 @@ module.exports.gen = function DFGenerate(path) {
     for (let i = 0; i < list.length; i++) {
         var item = list[i];
         var name = item.replace(".md", "");
-        if(dirLis.includes(name)){
-            files.mkdir(path+"/public/post/"+name);
-            files.cpdir(postdir+"/"+name,path+"/public/post/"+name);
+        files.mkdir(path + "/public/post/" + name);
+        if (dirLis.includes(name)) {
+            files.cpdir(postdir + "/" + name, path + "/public/post/" + name);
         }
         md2html.md2html(
             path + "/post/" + item,
-            path + "/public/post/" + name + ".html",
+            path + "/public/post/" + name + "/" + name + ".html",
             codeTheme
         );
     }
