@@ -43,7 +43,7 @@ module.exports.gen = function DFGenerate(path) {
         }
         md2html.md2html(
             path + "/post/" + item,
-            path + "/public/post/" + name + "/" + name + ".html",
+            path + "/public/post/" + name + "/index.html",
             codeTheme
         );
     }
