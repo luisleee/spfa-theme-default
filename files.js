@@ -38,6 +38,11 @@ module.exports.exist = function (file) {
     return fs.existsSync(file);
 };
 
+module.exports.isDirectory=function(file){
+    fs.statSync(file);
+    return file.isDirectory();
+}
+
 module.exports.mkdir = function (dir) {
     if (module.exports.exist(dir)) {
         console.log("DIRECTORY already exist!");

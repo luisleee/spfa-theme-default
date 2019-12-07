@@ -11,20 +11,20 @@ marked.setOptions({
 const htmlSkeleton = `<!DOCTYPE html>
 <html>
 <head>
-<title> __spfa_title__ </title>
+<title><spfa_title></title>
 <meta charset="utf-8">
 </head>
 <body>
-<h1> __spfa_title__ </h1>
- __spfa_css__ 
- __spfa_body__ 
+<h1><spfa_title></h1>
+<spfa_css>
+<spfa_body>
 </body>
 </html>`;
 
-var cssSkeleton = `<link rel="stylesheet" type="text/css" href=" __spfa_href__ ">`;
+var cssSkeleton = `<link rel="stylesheet" type="text/css" href="<spfa_href>">`;
 
 function cssSection(href) {
-    return cssSkeleton.replace(/ __spfa_href__ /g, href);
+    return cssSkeleton.replace(/<spfa_href>/g, href);
 }
 
 function convert(string, title, style) {
@@ -37,17 +37,15 @@ function convert(string, title, style) {
     var htmlBody = marked(string);
 
     var page = htmlSkeleton
-        .replace(/ __spfa_css__ /g, cssSegs)
-        .replace(/ __spfa_body__ /g, htmlBody)
-        .replace(/ __spfa_title__ /g, title);
+        .replace(/<spfa_css>/g, cssSegs)
+        .replace(/<spfa_body>/g, htmlBody)
+        .replace(/<spfa_title>/g, title);
     return page;
 }
 
-module.exports.md2html = function(from, to, title, theme) {
-    console.log(from);
-    var f = files.read(from);
-    f = f.toString();
-    var data = convert(f, title, theme);
+module.exports.md2html = function(from, to, theme) {
+    var file = files.read(from).toString();
+    var data = convert(file, theme);
     files.write(to, data, "utf8");
     console.log("Generating " + to);
 };
