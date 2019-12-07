@@ -1,6 +1,6 @@
 {
   "name": "spfa-theme-default",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "default theme for spfa",
   "main": "index.js",
   "scripts": {

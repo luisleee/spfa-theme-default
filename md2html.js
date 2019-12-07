@@ -27,10 +27,10 @@ function cssSection(href) {
     return cssSkeleton.replace(/<spfa_href>/g, href);
 }
 
-function convert(string, title, style) {
+function convert(string, style) {
     var info = frontMatter(string);
-    var ititle = info.attributes.title;
-    title = ititle ? ititle : title;
+    var title = info.attributes.title;
+    title = title ? title : "Untitled";
     string = info.body;
     var cssSegs = cssSection("../lib/spfa.css") + "\n";
     cssSegs += cssSection("../lib/" + style + ".css") + "\n";

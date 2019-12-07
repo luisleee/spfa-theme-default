@@ -28,7 +28,7 @@ module.exports.gen = function DFGenerate(path) {
     var dirLis_ = files.ls(postdir, "");
     var dirLis=[];
     for (let i = 0; i < dirLis_.length; i++) {
-        var dirPath=postdir+dirLis_[i];
+        var dirPath=postdir+"/"+dirLis_[i];
         if(files.isDirectory(dirPath)){
             dirLis.push(dirLis_[i]);
         }
