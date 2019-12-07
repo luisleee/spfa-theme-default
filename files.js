@@ -39,8 +39,8 @@ module.exports.exist = function (file) {
 };
 
 module.exports.isDirectory=function(file){
-    fs.statSync(file);
-    return file.isDirectory();
+    var st=fs.statSync(file);
+    return st.isDirectory();
 }
 
 module.exports.mkdir = function (dir) {
