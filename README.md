@@ -1,7 +1,5 @@
 # spfa-theme-default
 
-The default theme of spfa . 
+The default theme for spfa .
 
-It's also an built-in theme of spfa .
-
-It can also be an example of theme of spfa .
+It can also be an example of a theme for spfa.
