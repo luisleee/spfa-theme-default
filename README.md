@@ -1,5 +1,9 @@
 # spfa-theme-default
 
-The default theme for spfa .
+The default theme for spfa.
 
-It can also be an example of a theme for spfa.
+spfa的默认主题。
+
+It is also an example of a theme for spfa.
+
+它也是spfa主题的一个范例。

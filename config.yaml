@@ -1,1 +1,12 @@
-codeTheme: vs2015
+#######################################################################
+# Configure file for spfa-theme-default
+#######################################################################
+
+# The style to show code
+code-theme: dark
+# Supported code-themes
+# androidstudio dark idea ocean solarized-light tomorrow-night-eighties
+# arduino-light github monokai qtcreator_dark tomorrow vs2015
+# atom-one-dark github-gist monokai-sublime qtcreator_light tomorrow-night-blue  vs
+# atom-one-dark-reasonable googlecode night-owl rainbow tomorrow-night-bright xcode
+# atom-one-light hybrid obsidian solarized-dark tomorrow-night

@@ -19,7 +19,7 @@
 
 var marked = require("marked");
 var frontMatter = require("front-matter");
-var files = require("./files");
+var files = require("spfa-files");
 var highlight = require("highlight.js");
 marked.setOptions({
     highlight: function(code) {
@@ -53,7 +53,7 @@ function convert(string, style) {
     title = title ? title : "Untitled";
     string = info.body;
     var cssSegs = cssSection("../../lib/spfa.css") + "\n";
-    cssSegs += cssSection("../../lib/" + style + ".css") + "\n";
+    cssSegs += cssSection("../../lib/code-themes" + style + ".css") + "\n";
     var htmlBody = marked(string);
 
     var page = htmlSkeleton

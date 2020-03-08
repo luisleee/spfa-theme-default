@@ -17,7 +17,7 @@
 
 ////////////////////////////////////////////////////////////////////////
 
-var files = require("./files");
+var files = require("spfa-files");
 
 var htmlSkeleton = `<!DOCTYPE html>
 <html>
@@ -78,6 +78,6 @@ module.exports.mkindex = function(location, src) {
     try {
         files.write(location, page);
     } catch (err) {
-        console.error(err.toString());
+        console.error(err);
     }
-}
+};

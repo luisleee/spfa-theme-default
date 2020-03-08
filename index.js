@@ -17,21 +17,22 @@
 
 ////////////////////////////////////////////////////////////////////////
 
-var files = require("./files");
+var files = require("spfa-files");
 var md2html = require("./md2html");
 var mkindex = require("./mkindex");
-var yaml = require("./yaml");
+var yaml = require("spfa-yaml");
 
 module.exports.gen = function DFGenerate(path) {
     var config = yaml.read(__dirname + "/config.yaml");
     var codeTheme;
     try {
-        codeTheme = config.codeTheme ? config.codeTheme : "vs2015";
+        codeTheme = config["code-theme"] ? config["code-theme"] : "dark";
     } catch (error) {
         console.log("Detected error in config.yaml");
         console.log("Please check the configuration of config.yaml");
-        console.log("Using default code-theme (vs2015)");
-        codeTheme = "vs2015";
+        console.log("Using default code-theme (dark)");
+        console.log("If you want to get a full list of code themes, please read the originl config.yaml");
+        codeTheme = "dark";
     }
     try {
         files.cpdir(__dirname + "/lib", path + "/public/lib");
