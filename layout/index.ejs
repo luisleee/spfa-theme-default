@@ -2,15 +2,20 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title><%= title %></title>
-    <% var spfaCSS="../lib/spfa.css" %>
+    <% var spfaCSS="../lib/css/spfa.css" %>
     <link rel="stylesheet" href=<%= spfaCSS %>>
 </head>
 
 <body>
     <h1><%= title %></h1>
-    <%- html %>
+    <ul>
+        <% for( let i = 0; i < list.length; i++ ) { %>
+        <%  var name = list[i]; %>
+        <li><a href=<%= "post/" + name + ".html" %>><%= name %> </a></li>
+        <% } %>
+    </ul>
 </body>
 
 </html>

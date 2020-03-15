@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html>
+<% 
+var title = frontMatter.title ? frontMatter.title : "Title";
+var date = frontMatter.date ? frontMatter.date : new Date().toLocaleDateString();
+%>
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+
     <title><%= title %></title>
-    <% var codeThemeDir="../lib/code-themes/"+codeTheme+".css" %>
+    <% var codeThemeDir = "../lib/css/code-themes/" + config["code-theme"] + ".css"; %>
     <link rel="stylesheet" href=<%= codeThemeDir %>>
 </head>
 
 <body>
-    <h1><%= title %> </h1>
-    <%- html %>
+    <script src="../lib/js/marked.min.js"></script>
+    <script src="../lib/js/highlight.min.js"></script>
+    <script src="../lib/js/jquery-3.4.1.js"></script>
+    <script>
+        marked.setOptions({
+            highlight: function (code) {
+                return hljs.highlightAuto(code).value;
+            }
+        });
+        var html = marked("<%- markdown %>");
+        $(function(){
+            $("#text").html(html);
+        });
+    </script>
+
+    <article>
+        <h2><%= title %></h2>
+        <p><%= date %></p>
+        <hr>
+        <p id="text"></p>
+    </article>
 </body>
 
 </html>
