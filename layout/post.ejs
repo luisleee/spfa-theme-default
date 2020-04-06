@@ -17,13 +17,15 @@ var date = frontMatter.date ? frontMatter.date : new Date().toLocaleDateString()
     <script src="../lib/js/marked.min.js"></script>
     <script src="../lib/js/highlight.min.js"></script>
     <script src="../lib/js/jquery-3.4.1.js"></script>
+    <% markdown = markdown.replace(/`/g,"\\`"); %>
     <script>
         marked.setOptions({
             highlight: function (code) {
                 return hljs.highlightAuto(code).value;
             }
         });
-        var html = marked("<%- markdown %>");
+        
+        var html = marked(`<%= markdown %>`);
         $(function(){
             $("#text").html(html);
         });
