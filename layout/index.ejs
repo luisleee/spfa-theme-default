@@ -4,18 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <title><%= title %></title>
-    <% var spfaCSS="../lib/css/spfa.css" %>
-    <link rel="stylesheet" href=<%= spfaCSS %>>
+    <link rel="stylesheet" href="lib/css/index.css">
 </head>
 
 <body>
-    <h1><%= title %></h1>
-    <ul>
-        <% for( let i = 0; i < list.length; i++ ) { %>
-        <%  var name = list[i]; %>
-        <li><a href=<%= "post/" + name + ".html" %>><%= name %> </a></li>
-        <% } %>
-    </ul>
+    <header><a href="index.html"><%= title %></a></header>
+    <div id="mainbox">
+        <ul id="list">
+            <% for( let i = 0; i < list.length; i++ ) { %>
+            <%  var name = list[i]; %>
+            <li><a href=<%= "post/" + name + ".html" %>><%= name %> </a></li>
+            <% } %>
+        </ul>
+    </div>
 </body>
 
 </html>

@@ -1,0 +1,86 @@
+/*
+***************************************************************************
+* Copyright (C) 2020 李嘉嵘 
+* This file is a part of spfa-theme-default.
+*
+* spfa-theme-default is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* spfa-theme-default is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with spfa-theme-default.  If not, see <https://www.gnu.org/licenses/>.
+**************************************************************************
+*/
+
+body {
+    font-family: Consolas, monospace;
+    margin: auto;
+}
+
+header {
+    background-color: #f5f5f5;
+    margin: auto;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+header a {
+    color: black;
+}
+
+header a:visited {
+    color: black;
+}
+
+#mainbox {
+    margin: 10px 10%;
+    background-color: #f5f5f5;
+}
+
+.tag {
+    background-color: #e5e5e5;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+tr:nth-child(2n) {
+    background-color: #e5e5e5;
+}
+
+td {
+    border: 1px solid gray;
+    padding: 5px;
+}
+
+th {
+    border: 1px solid gray;
+    padding: 5px;
+    font-weight: bold;
+}
+
+pre,
+code {
+    background-color: #e5e5e5;
+}
+
+a {
+    text-decoration-line: none;
+    color: #0000ff;
+}
+
+a:visited {
+    text-decoration-line: none;
+    color: #0000ff;
+}
