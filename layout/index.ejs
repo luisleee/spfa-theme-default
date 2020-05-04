@@ -11,9 +11,10 @@
     <header><a href="index.html"><%= title %></a></header>
     <div id="mainbox">
         <ul id="list">
-            <% for( let i = 0; i < list.length; i++ ) { %>
-            <%  var name = list[i]; %>
-            <li><a href=<%= "post/" + name + ".html" %>><%= name %> </a></li>
+            <% for(const name in info){ %>
+                <% if(info.hasOwnProperty(name)){%>
+                    <li><a href=<%= "post/" + name + ".html" %>><%= name %> </a></li>
+                <% } %>
             <% } %>
         </ul>
     </div>
