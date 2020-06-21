@@ -25,7 +25,7 @@ body {
 
 header {
     background-color: #f5f5f5;
-    margin: auto;
+    padding: 5px;
     font-size: xx-large;
     font-weight: bold;
 }
