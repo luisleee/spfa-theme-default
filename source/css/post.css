@@ -1,6 +1,6 @@
 /*
 ***************************************************************************
-* Copyright (C) 2020 李嘉嵘 
+* Copyright (C) 2020 李嘉嵘
 * This file is a part of spfa-theme-default.
 *
 * spfa-theme-default is free software: you can redistribute it and/or modify
@@ -23,16 +23,26 @@ body {
     margin: auto;
 }
 
+a {
+    text-decoration-line: none;
+    color: #54ff00;
+}
+
 header {
     background-color: #f5f5f5;
     padding: 10px;
     font-size: xx-large;
     font-weight: bold;
-    text-align:center;
+    text-align: center;
 }
 
 header a {
     color: black;
+}
+
+a:visited {
+    text-decoration-line: none;
+    color: #54ff00;
 }
 
 header a:visited {
@@ -77,14 +87,4 @@ th {
 pre,
 code {
     background-color: #e5e5e5;
-}
-
-a {
-    text-decoration-line: none;
-    color: #54ff00;
-}
-
-a:visited {
-    text-decoration-line: none;
-    color: #54ff00;
 }
